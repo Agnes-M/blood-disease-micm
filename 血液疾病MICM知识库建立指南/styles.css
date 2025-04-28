@@ -1,0 +1,442 @@
+/* 全局样式 */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --text-color: #333;
+    --link-color: #3498db;
+    --link-hover-color: #2980b9;
+    --success-color: #2ecc71;
+    --warning-color: #f39c12;
+    --danger-color: #e74c3c;
+    --border-radius: 4px;
+    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans SC', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+ul, ol {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background-color: var(--link-hover-color);
+    color: white;
+}
+
+/* 头部样式 */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+header .subtitle {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+/* 导航样式 */
+nav {
+    background-color: white;
+    box-shadow: var(--box-shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-x: auto;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    padding: 1rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    text-align: center;
+    white-space: nowrap;
+}
+
+nav a:hover, nav a.active {
+    color: var(--secondary-color);
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+/* 主要内容样式 */
+main {
+    padding: 2rem 0;
+}
+
+section {
+    margin-bottom: 3rem;
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+}
+
+section h2 {
+    position: relative;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--secondary-color);
+}
+
+/* 特点网格 */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.feature-item {
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    border: 1px solid #eee;
+    transition: var(--transition);
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow);
+}
+
+.feature-item h3 {
+    color: var(--secondary-color);
+}
+
+/* 疾病网格 */
+.disease-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.disease-category {
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    border: 1px solid #eee;
+}
+
+.disease-category h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.disease-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.disease-category li {
+    margin-bottom: 0.5rem;
+}
+
+/* MICM框架网格 */
+.micm-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.micm-item {
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    border: 1px solid #eee;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.micm-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow);
+}
+
+.micm-item h3 {
+    color: var(--secondary-color);
+}
+
+.micm-item .btn {
+    margin-top: 1rem;
+}
+
+/* 指南网格 */
+.guideline-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.guideline-item {
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    border: 1px solid #eee;
+}
+
+.guideline-item h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.guideline-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.guideline-item li {
+    margin-bottom: 0.5rem;
+}
+
+/* 页脚样式 */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    nav ul {
+        flex-wrap: nowrap;
+    }
+    
+    .feature-grid, .disease-grid, .micm-grid, .guideline-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 疾病详情页样式 */
+.disease-header {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+.disease-header h1 {
+    color: white;
+}
+
+.disease-nav {
+    background-color: white;
+    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
+    box-shadow: var(--box-shadow);
+}
+
+.disease-nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-x: auto;
+}
+
+.disease-nav li {
+    margin: 0;
+}
+
+.disease-nav a {
+    display: block;
+    padding: 1rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.disease-nav a:hover, .disease-nav a.active {
+    color: var(--secondary-color);
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.disease-content {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+}
+
+.disease-content h2 {
+    color: var(--secondary-color);
+    margin-top: 2rem;
+}
+
+.disease-content h3 {
+    color: var(--primary-color);
+    margin-top: 1.5rem;
+}
+
+.disease-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+}
+
+.disease-content th, .disease-content td {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+}
+
+.disease-content th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+.disease-content tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* MICM分类页面样式 */
+.micm-header {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+.micm-header h1 {
+    color: white;
+}
+
+.micm-content {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+}
+
+.disease-list {
+    list-style: none;
+    padding: 0;
+}
+
+.disease-list li {
+    margin-bottom: 0.5rem;
+}
+
+.disease-list a {
+    display: block;
+    padding: 0.75rem;
+    background-color: #f9f9f9;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.disease-list a:hover {
+    background-color: #eee;
+}
+
+/* 参考资源页面样式 */
+.reference-list {
+    list-style: none;
+    padding: 0;
+}
+
+.reference-list li {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.reference-list h3 {
+    margin-bottom: 0.5rem;
+}
+
+.reference-list p {
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+.reference-list .btn {
+    margin-top: 0.5rem;
+}
